@@ -12,8 +12,8 @@ h3{
 
 .frontiere{
     display: flex;
-    height: 700px;
-    width: 50%;
+    height: 650px;
+    width: 550px;
     border: 6px solid white;
     margin-left: 25%;
     background-image: url(ressources/background-black.png);
@@ -21,10 +21,12 @@ h3{
 
 .joueur{
     position: absolute;
-    height: 86px;
-    width: 104px;
-    margin-left: 22% ;
-    margin-top: 42%;
+    height: 40px;
+    width: 40px;
+    bottom: 0px;
+    right: 530px;
     transform: rotate(180deg);
     background-image: url(ressources/vaisseau.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
