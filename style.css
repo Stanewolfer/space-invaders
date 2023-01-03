@@ -1,1 +1,27 @@
+body{
+    background-color: black;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    color:rgba(255, 255, 255, 0.75);   
+}
 
+.frontiere{
+    display: flex;
+    height: 600px;
+    width: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.75);
+    margin-left: 25%;
+    background-image: url(ressources/background-black.png);
+}
+
+.joueur{
+    position: absolute;
+    height: 86px;
+    width: 104px;
+    margin-left: 22% ;
+    margin-top: 42%;
+    transform: rotate(180deg);
+    background-image: url(ressources/vaisseau.png);
+}
