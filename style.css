@@ -9,7 +9,6 @@
     background: url(ressources/background-black.png);
     animation: background-defile 5s linear infinite;
 }
-
 @keyframes background-defile {
     from {
         background-position-y: 0px;
@@ -43,4 +42,35 @@ h3 {
 }
 .laser {
     background-color: orange;
+}
+html{
+    background-color: black;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+.frontiere{
+    display: flex;
+    height: 650px;
+    width: 550px;
+    border: 6px solid white;
+    margin-left: 25%;
+    background-image: url(ressources/background-black.png);
+}
+
+.joueur{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 0px;
+    right: 530px;
+    transform: rotate(180deg);
+    background-image: url(ressources/vaisseau.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
