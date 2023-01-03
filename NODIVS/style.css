@@ -56,8 +56,8 @@ h3{
 
 .frontiere{
     display: flex;
-    height: 650px;
-    width: 550px;
+    height: 640px;
+    width: 640px;
     border: 6px solid white;
     margin-left: 25%;
     background-image: url(ressources/background-black.png);
@@ -67,8 +67,8 @@ h3{
     position: absolute;
     height: 40px;
     width: 40px;
-    bottom: 0px;
-    right: 530px;
+    bottom: 86px;
+    left: 670px;
     transform: rotate(180deg);
     background-image: url(ressources/vaisseau.png);
     background-repeat: no-repeat;

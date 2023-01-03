@@ -1,4 +1,6 @@
 
+
+
 window.addEventListener('keydown', (e) => {
     console.log(e);
   
@@ -20,7 +22,7 @@ function Spacekey(e) {
   }
 }
 function player_left(){
-  
+
 }
 function player_right(){
 
