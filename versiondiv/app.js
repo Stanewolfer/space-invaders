@@ -47,3 +47,4 @@ function player_right(){
 function player_shoot(){
 
 }
+
