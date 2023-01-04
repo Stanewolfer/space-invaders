@@ -1,31 +1,6 @@
-const grid = document.querySelector(".grille")
+import * as map from "./map.js";
 
-for (let i = 0; i < 20; i++) {
-    for (let j = 0; j < 20; j++) {
-        const newgrill = document.createElement("div");
-
-        if(j == 0 || j  == 19){
-            if(j ==0){
-                newgrill.classList.add("border_left")
-            }else{
-                newgrill.classList.add("border_right")
-            }
-        }
-
-        if(i < 3 && j < 15){
-            newgrill.classList.add("alien");
-
-        }
-
-
-
-        if (i == 19 && j == 10){
-            newgrill.classList.add("tireur");
-        }
-
-        grid.appendChild(newgrill);
-    }
-}
+map.createmap();
 
 
 window.addEventListener('keydown', (e) => {
@@ -55,16 +30,29 @@ function Spacekey(e) {
   }
 }
 function player_left(){
+  map.setPosX(map.posX - 1);
 
+  map.grid.innerHTML = "";
+  map.createmap();
 }
 function player_up(){
+  map.setPosX(map.posY + 1);
 
+  map.grid.innerHTML = "";
+  map.createmap();
 }
 function player_right(){
+  map.setPosX(map.posX + 1);
 
+  map.grid.innerHTML = "";
+  map.createmap();
 }
 function player_down(){
+  if()
+  map.setPosX(map.posY - 1);
 
+  map.grid.innerHTML = "";
+  map.createmap();
 }
 function player_shoot(){
 
