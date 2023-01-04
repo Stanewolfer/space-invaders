@@ -50,7 +50,8 @@ function player_shoot(){
 
 }
 function game_over(){
-  if(window.addEventListener('keydown')==71){
+  window.addEventListener('keydown', (e))
+  if(e=="g"){ 
     reset;
   }
 }
