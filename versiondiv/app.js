@@ -21,9 +21,6 @@ for (let i = 0; i < 20; i++) {
 
 window.addEventListener('keydown', (e) => {
     console.log(e);
-  
-  
-
   });
 
 document.onkeydown = Spacekey;
@@ -50,9 +47,12 @@ function player_shoot(){
 
 }
 function game_over(){
+  e=e || window.event;
+  if(e.keyCode==71){
     console.log("game over");
     var reset=document.querySelector(".bouton")
     var t=document.createTextNode("REJOUER ?");
     reset.append(t);
     reset.setAttribute("style","width:100px","height:50px","color:rgba(255,255,255,0.8)","background-color:grey","border-radius:25px")
+  }
 }
