@@ -2,10 +2,9 @@ import * as map from "./map.js";
 
 map.createmap();
 
-
 window.addEventListener('keydown', (e) => {
     console.log(e);
-  
+    console.log(map.posY);
   
   });
 
@@ -30,30 +29,40 @@ function Spacekey(e) {
   }
 }
 function player_left(){
-  map.setPosX(map.posX - 1);
+  if(map.posX !== 0){
+    map.setPosX(map.posX - 1);
 
-  map.grid.innerHTML = "";
-  map.createmap();
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_up(){
-  map.setPosX(map.posY + 1);
+  if(map.posY !== 16){
+    map.setPosY(map.posY - 1);
 
-  map.grid.innerHTML = "";
-  map.createmap();
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_right(){
-  map.setPosX(map.posX + 1);
+  if(map.posX !== 19){
+    map.setPosX(map.posX + 1);
 
-  map.grid.innerHTML = "";
-  map.createmap();
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_down(){
-  if()
-  map.setPosX(map.posY - 1);
+  if(map.posY !==19){
+    map.setPosY(map.posY + 1);
 
-  map.grid.innerHTML = "";
-  map.createmap();
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_shoot(){
-
+  
+  map.setShoot(map.posY - 1)
+  map.grid.innerHTML = "";
+  map.createmap();
 }

@@ -1,8 +1,15 @@
 export let posX = 10;
 export let posY = 19;
+export let shotpos;
 
-export function setPosX(value) {
-    posX = value;
+export function setPosX(valueX) {
+    posX = valueX;
+}
+export function setPosY(valueY) {
+    posY = valueY;
+}
+export function setShoot(shotY){
+    shotpos = shotY;
 }
 
 export const grid = document.querySelector(".grille")
@@ -39,6 +46,11 @@ export function createmap(){
                 newgrill.classList.add("tireur");
                 posX = j;
                 posY = i;
+            }
+            if (i == shotpos && j == posX){
+                
+                newgrill.classList.add("laser");
+
             }
 
             grid.appendChild(newgrill);
