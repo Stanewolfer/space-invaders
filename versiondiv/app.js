@@ -52,13 +52,9 @@ function player_shoot(){
 function game_over(){
   window.addEventListener('keydown', (e))
   if(e=="g"){ 
-    reset;
+    var btn=document.createElement("BUTTON");
+    var t=document.createTextNode("REJOUER ?");
+    btn.append(t);
+    document.body.appendChild(btn);;
   }
-}
-
-function reset(){
-  var btn=document.createElement("BUTTON");
-  var t=document.createTextNode("REJOUER ?");
-  btn.append(t);
-  body.appendChild(btn);
 }
