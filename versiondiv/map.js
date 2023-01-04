@@ -27,12 +27,8 @@ export function createmap(){
                 }
             }
 
-            if(i == 19 || i == 16){
             if(i == 19){
                 newgrill.classList.add("border_bot")
-            }else{
-                newgrill.classList.add("border_top")
-            }
             }
 
             if(i < 3 && j < 15){
@@ -44,8 +40,7 @@ export function createmap(){
 
             if (i == posY && j == posX){
                 newgrill.classList.add("tireur");
-                posX = j;
-                posY = i;
+    
             }
             if (i == shotpos && j == posX){
                 

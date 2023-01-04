@@ -4,7 +4,6 @@ map.createmap();
 
 window.addEventListener('keydown', (e) => {
     console.log(e);
-    console.log(map.posY);
   
   });
 
@@ -61,7 +60,7 @@ function player_down(){
   }
 }
 function player_shoot(){
-  
+
   map.setShoot(map.posY - 1)
   map.grid.innerHTML = "";
   map.createmap();
