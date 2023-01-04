@@ -50,7 +50,9 @@ function player_shoot(){
 
 }
 function game_over(){
-  if(window.addEventListener(keyCode)==71){ 
+  let e=window.addEventListener('keydown')
+  if(e.keyCode==71){
+    console.log("game over");
     var btn=document.createElement("BUTTON");
     var t=document.createTextNode("REJOUER ?");
     btn.append(t);
