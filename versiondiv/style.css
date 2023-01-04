@@ -71,3 +71,8 @@ h3 {
 .laser {
     background-color: orange;
 }
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
