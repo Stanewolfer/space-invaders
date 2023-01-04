@@ -1,3 +1,4 @@
+
 const grid = document.querySelector(".grille")
 
 for (let i = 0; i < 20; i++) {
@@ -22,6 +23,7 @@ window.addEventListener('keydown', (e) => {
     console.log(e);
   
   
+
   });
 
 document.onkeydown = Spacekey;
