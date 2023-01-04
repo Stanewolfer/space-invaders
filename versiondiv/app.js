@@ -60,5 +60,5 @@ function reset(){
   var btn=document.createElement("BUTTON");
   var t=document.createTextNode("REJOUER ?");
   btn.append(t);
-  document.body.appendChild(btn);
+  body.appendChild(btn);
 }
