@@ -51,14 +51,13 @@ function player_shoot(){
 }
 function game_over(){
   if(window.addEventListener('keydown')==71){
-    return true;
+    reset;
   }
-  }
+}
+
 function reset(){
   var btn=document.createElement("BUTTON");
   var t=document.createTextNode("REJOUER ?");
   btn.append(t);
-  if (game_over){
-    document.body.appendChild(btn);
-  }
+  document.body.appendChild(btn);
 }
