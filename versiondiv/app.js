@@ -36,6 +36,12 @@ function Spacekey(e) {
   if (e.keyCode == '32') {
     player_shoot();
   }
+  if(e.keyCode=='71'){
+    gagner();
+  }
+  if(e.keyCode=='80'){
+    perdu();
+  }
 }
 function player_left(){
 
@@ -46,13 +52,25 @@ function player_right(){
 function player_shoot(){
 
 }
-function game_over(){
-  e=e || window.event;
-  if(e.keyCode==71){
-    console.log("game over");
+function perdu(){
+    alert("VOUS AVEZ PERDU !");
     var reset=document.querySelector(".bouton")
     var t=document.createTextNode("REJOUER ?");
     reset.append(t);
-    reset.setAttribute("style","width:100px","height:50px","color:rgba(255,255,255,0.8)","background-color:grey","border-radius:25px")
-  }
+    reset.style.width="100px";
+    reset.style.height="50px";
+    reset.style.color="rgba(255,255,255,0.8)";
+    reset.style.backgroundColor="grey";
+    reset.style.borderRadius="25px";
+}
+function gagner(){
+  alert("VOUS AVEZ GAGNE !");
+  var reset=document.querySelector(".bouton")
+  var t=document.createTextNode("REJOUER ?");
+  reset.append(t);
+  reset.style.width="100px";
+  reset.style.height="50px";
+  reset.style.color="rgba(255,255,255,0.8)";
+  reset.style.backgroundColor="grey";
+  reset.style.borderRadius="25px";
 }

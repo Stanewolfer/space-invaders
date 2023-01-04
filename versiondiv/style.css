@@ -76,3 +76,8 @@ h3 {
     align-items: center;
     justify-content: center;
 }
+.bouton{
+    background-color: white;
+    border: none;
+    text-align: center;
+}
