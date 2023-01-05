@@ -36,9 +36,9 @@ function Spacekey(e) {
     perdu();
   }
 }
-//if(allDiv[position_alien].classList.contains("border_bot")){
-//  perdu();
-//}
+if(allDiv[alien].classList.contains("border_bot")){
+  perdu();
+}
 function player_left(){
   if(!allDiv[map.posship].classList.contains('border_left')){
     allDiv[map.posship].classList.remove("tireur");
@@ -98,7 +98,9 @@ function gagner(){
     location.reload()
   })
 }
-
+if(allDiv[position_alien].classList.contains("laser")){
+  document.querySelector(classList.contains("laser")).style.color="red";
+}
   map.setShoot(map.posY - 1);
   map.grid.innerHTML = "";
   map.createmap();
