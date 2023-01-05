@@ -3,7 +3,6 @@ import * as map from "./map.js";
 map.createmap();
 
 
-
 let allDiv = document.querySelectorAll('.grille div');
 console.log(map.grid.classList.contains("border_left"));
 
@@ -31,9 +30,6 @@ function Spacekey(e) {
   }
 }
 function player_left(){
-  
-  console.log(allDiv[map.posship].className);
-
   if(!allDiv[map.posship].classList.contains('border_left')){
     allDiv[map.posship].classList.remove("tireur");
     map.setpoship(map.posship - 1);
@@ -62,7 +58,7 @@ function player_down(){
   }
 }
 function player_shoot(){
-  allDiv[map.posship + 1].classList.add("tireur");
-
   
+  allDiv[map.posship - 20].classList.add("laser");
+
 }
