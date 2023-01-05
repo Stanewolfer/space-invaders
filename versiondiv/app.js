@@ -56,13 +56,13 @@ function player_right(){
 }
 function player_down(){
   if(!allDiv[map.posship].classList.contains('border_bot')){
-
     allDiv[map.posship].classList.remove("tireur");
     map.setpoship(map.posship + 20);
     allDiv[map.posship].classList.add("tireur");
   }
 }
 function player_shoot(){
+  allDiv[map.posship + 1].classList.add("tireur");
 
   
 }
