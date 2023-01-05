@@ -79,6 +79,7 @@ function perdu(){
     reset.style.color="rgba(255,255,255,0.8)";
     reset.style.backgroundColor="grey";
     reset.style.borderRadius="25px";
+    reset.href="index.html";
 }
 function gagner(){
   alert("VOUS AVEZ GAGNE !");
@@ -90,6 +91,7 @@ function gagner(){
   reset.style.color="rgba(255,255,255,0.8)";
   reset.style.backgroundColor="grey";
   reset.style.borderRadius="25px";
+  reset.href="index.html";
 }
 
   map.setShoot(map.posY - 1);
