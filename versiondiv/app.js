@@ -68,18 +68,14 @@ function player_down(){
   }
 }
 function player_shoot(){
-
-  allDiv[map.posship - 20].classList.add("laser");
-
   posShots = map.posship;
   let boucle = setInterval(() =>{
       allDiv[posShots].classList.remove("laser");
       posShots = posShots - 20;
       allDiv[posShots].classList.add("laser");
-      
       if(posShots < 20){
         clearInterval(boucle);
-        setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
+        setTimeout(() => allDiv[posShots].classList.remove("laser"), 400);
       }
   }, 100);
 
