@@ -92,6 +92,6 @@ function gagner(){
   reset.style.borderRadius="25px";
 }
 
-  map.setShoot(map.posY - 1)
+  map.setShoot(map.posY - 1);
   map.grid.innerHTML = "";
   map.createmap();
