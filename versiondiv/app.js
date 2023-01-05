@@ -68,9 +68,35 @@ function player_down(){
   }
 }
 function player_shoot(){
-  
   allDiv[map.posship - 20].classList.add("laser");
-
+}
+function perdu(){
+    alert("VOUS AVEZ PERDU !");
+    var reset=document.querySelector(".bouton")
+    var t=document.createTextNode("REJOUER ?");
+    reset.append(t);
+    reset.style.width="100px";
+    reset.style.height="50px";
+    reset.style.color="rgba(255,255,255,0.8)";
+    reset.style.backgroundColor="grey";
+    reset.style.borderRadius="25px";
+    reset.addEventListener('click', event => {
+      location.reload()
+    })
+}
+function gagner(){
+  alert("VOUS AVEZ GAGNE !");
+  var reset=document.querySelector(".bouton")
+  var t=document.createTextNode("REJOUER ?");
+  reset.append(t);
+  reset.style.width="100px";
+  reset.style.height="50px";
+  reset.style.color="rgba(255,255,255,0.8)";
+  reset.style.backgroundColor="grey";
+  reset.style.borderRadius="25px";
+  reset.addEventListener('click', event => {
+    location.reload()
+  })
 }
 
   map.setShoot(map.posY - 1);
