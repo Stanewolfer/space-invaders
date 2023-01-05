@@ -1,37 +1,11 @@
-const grid = document.querySelector(".grille")
+import * as map from "./map.js";
 
-for (let i = 0; i < 20; i++) {
-    for (let j = 0; j < 20; j++) {
-        const newgrill = document.createElement("div");
-
-        if(j == 0 || j  == 19){
-            if(j ==0){
-                newgrill.classList.add("border_left")
-            }else{
-                newgrill.classList.add("border_right")
-            }
-        }
-
-        if(i < 3 && j < 15){
-            newgrill.classList.add("alien");
-
-        }
-
-
-
-        if (i == 19 && j == 10){
-            newgrill.classList.add("tireur");
-        }
-
-        grid.appendChild(newgrill);
-    }
-}
-
+map.CreateMap();
+map.Aliens();
+setInterval(map.AliensMovement,100) 
 
 window.addEventListener('keydown', (e) => {
     console.log(e);
-  
-  
   });
 
 document.onkeydown = Spacekey;
@@ -55,17 +29,40 @@ function Spacekey(e) {
   }
 }
 function player_left(){
+  if(map.posX !== 0){
+    map.setPosX(map.posX - 1);
 
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_up(){
+  if(map.posY !== 16){
+    map.setPosY(map.posY - 1);
 
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_right(){
+  if(map.posX !== 19){
+    map.setPosX(map.posX + 1);
 
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_down(){
+  if(map.posY !==19){
+    map.setPosY(map.posY + 1);
 
+    map.grid.innerHTML = "";
+    map.createmap();
+  }
 }
 function player_shoot(){
 
+  map.setShoot(map.posY - 1)
+  map.grid.innerHTML = "";
+  map.createmap();
 }
