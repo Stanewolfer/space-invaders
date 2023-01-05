@@ -2,7 +2,7 @@ import * as map from "./map.js";
 
 map.createmap();
 
-
+let posShots;
 let allDiv = document.querySelectorAll('.grille div');
 console.log(map.grid.classList.contains("border_left"));
 
@@ -58,7 +58,15 @@ function player_down(){
   }
 }
 function player_shoot(){
-  
-  allDiv[map.posship - 20].classList.add("laser");
-
+  posShots = map.posship;
+  let boucle = setInterval(() =>{
+      allDiv[posShots].classList.remove("laser");
+      posShots = posShots - 20;
+      allDiv[posShots].classList.add("laser");
+      
+      if(posShots < 20){
+        clearInterval(boucle);
+        setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
+      }
+  }, 100);
 }
