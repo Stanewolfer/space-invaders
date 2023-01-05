@@ -42,6 +42,9 @@ function Spacekey(e) {
     perdu();
   }
 }
+//if(allDiv[position_alien].classList.contains("border_bot")){
+//  perdu();
+//}
 function player_left(){
   
   console.log(allDiv[map.posship].className);
