@@ -74,7 +74,7 @@ function player_down(){
   }
 }
 function player_shoot(){
-  allDiv[map.posship + 1].classList.add("tireur");
+  allDiv[map.posship-20].classList.add("laser");
 
 
 }
