@@ -83,7 +83,9 @@ export function AliensMovement(){
         }else{
             console.log("game over");
             perdu();
+            break;
             death.play();
+            
         }
         
     }   
@@ -110,6 +112,6 @@ function perdu(){
     reset.style.backgroundColor="grey";
     reset.style.borderRadius="25px";
     reset.addEventListener('click', event => {
-      location.reload()
+      location.reload();
     })
 }
