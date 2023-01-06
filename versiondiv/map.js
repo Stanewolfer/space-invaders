@@ -81,9 +81,9 @@ export function AliensMovement(){
                 }
             }
         }else{
-            death.play();
             console.log("game over");
-            
+            perdu();
+            death.play();
         }
         
     }   
@@ -98,4 +98,18 @@ export function AliensMovement(){
     for(let i = 0; i < poziAliens.length; i++){
         AllDiv[poziAliens[i]].classList.add('alien');
     }
+}
+function perdu(){
+    alert("VOUS AVEZ PERDU !");
+    var reset=document.querySelector(".bouton")
+    var t=document.createTextNode("REJOUER ?");
+    reset.append(t);
+    reset.style.width="100px";
+    reset.style.height="50px";
+    reset.style.color="rgba(255,255,255,0.8)";
+    reset.style.backgroundColor="grey";
+    reset.style.borderRadius="25px";
+    reset.addEventListener('click', event => {
+      location.reload()
+    })
 }
