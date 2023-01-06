@@ -2,8 +2,11 @@ import * as map from "./map.js";
 
 
 map.createmap();
-
+map.Aliens();
+setInterval(map.AliensMovement,300);
+let keypressed = true;
 let posShots;
+
 let allDiv = document.querySelectorAll('.grille div');
 console.log(map.grid.classList.contains("border_left"));
 
@@ -27,7 +30,11 @@ function Spacekey(e) {
     player_down();
   }
   if (e.keyCode == '32') {
-    player_shoot();
+    if(keypressed == true){
+      keypressed = false;
+      player_shoot();
+
+    }
   }
   if(e.keyCode=='71'){
     gagner();
@@ -76,7 +83,20 @@ function player_shoot(){
       if(posShots < 20){
         clearInterval(boucle);
         setTimeout(() => allDiv[posShots].classList.remove("laser"), 400);
+      if(allDiv[posShots].classList.contains("alien")){
+        allDiv[posShots].classList.remove("alien");
+        
+        clearInterval(boucle);
+        setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
+        keypressed = true;
+
       }
+      if(posShots < 20){
+          clearInterval(boucle);
+          setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
+          keypressed = true;
+      }
+    }
   }, 100);
 
 }
