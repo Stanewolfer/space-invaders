@@ -44,3 +44,7 @@ h3 {
 .laser {
     background-color: orange;
 }
+#start{
+    width: 60px;
+    height: 20px;
+}

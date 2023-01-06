@@ -5,9 +5,9 @@ map.Aliens();
 setInterval(map.AliensMovement,1000);
 let keypressed = true;
 let posShots;
-let touch = [];
 
 let allDiv = document.querySelectorAll('.grille div');
+
 
 window.addEventListener('keydown', (e) => {
 });
