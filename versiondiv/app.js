@@ -8,7 +8,6 @@ start.addEventListener('click', event => {
 setInterval(map.AliensMovement,300);
 let keypressed = true;
 let posShots;
-let touch = [];
 
 let allDiv = document.querySelectorAll('.grille div');
 
