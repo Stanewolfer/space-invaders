@@ -12,6 +12,7 @@ console.log(map.grid.classList.contains("border_left"));
 window.addEventListener('keydown', (e) => {
   console.log(e);
 });
+
 document.onkeydown = Spacekey;
 function Spacekey(e) {
   e = e || window.event;
