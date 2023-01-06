@@ -2,7 +2,7 @@ import * as map from "./map.js";
 
 map.createmap();
 map.Aliens();
-setInterval(map.AliensMovement,300);
+setInterval(map.AliensMovement,1000);
 let keypressed = true;
 let posShots;
 let touch = [];
@@ -71,6 +71,8 @@ function player_shoot(){
       allDiv[posShots].classList.add("laser");
       if(allDiv[posShots].classList.contains("alien")){
         allDiv[posShots].classList.remove("alien");
+        allDiv[posShots].classList.add("boom");
+
         console.log(posShots);
         map.newalien(posShots);
         console.log(map.poziAliens);
