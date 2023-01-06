@@ -13,7 +13,6 @@ let allDiv = document.querySelectorAll('.grille div');
 
 window.addEventListener('keydown', (e) => {
 });
-
 document.onkeydown = Spacekey;
 function Spacekey(e) {
   e = e || window.event;
@@ -34,17 +33,9 @@ function Spacekey(e) {
     if(keypressed == true){
       keypressed = false;
       player_shoot();
+
     }
   }
-  if(e.keyCode=='71'){
-    gagner();
-  }
-  if(e.keyCode=='80'){
-    perdu();
-  }
-}
-if(allDiv[map.alien].classList.contains("border_bot")){
-  perdu();
 }
 function player_left(){
   if(!allDiv[map.posship].classList.contains('border_left')){
@@ -80,12 +71,8 @@ function player_shoot(){
       allDiv[posShots].classList.remove("laser");
       posShots = posShots - 20;
       allDiv[posShots].classList.add("laser");
-      if(posShots < 20){
-        clearInterval(boucle);
-        setTimeout(() => allDiv[posShots].classList.remove("laser"), 400);
       if(allDiv[posShots].classList.contains("alien")){
         allDiv[posShots].classList.remove("alien");
-        const index = map.poziAliens.indexOf(posShots);
         console.log(posShots);
         map.newalien(posShots);
         console.log(map.poziAliens);
@@ -100,9 +87,7 @@ function player_shoot(){
           setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
           keypressed = true;
       }
-    }
   }, 100);
-
 }
 
 
