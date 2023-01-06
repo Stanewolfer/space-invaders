@@ -53,10 +53,16 @@ let fromRight = true;
 let fromLeft = false;
 
 export function AliensMovement(){
+    console.log(poziAliens.length);
     let AllDiv = document.querySelectorAll('.grille div');
-    
-    for(let i = 0;i < poziAliens.length; i++){
+    AllDiv.forEach(div=>
+        div.classList.remove('boom'));
+    if(poziAliens.length == 0){
+        console.log("win");
+    }  
         
+    for(let i = 0;i < poziAliens.length; i++){
+       
         if(AllDiv[poziAliens[i]].classList.contains("border_right")){
             if(fromRight == true){
                 direction = 20;
@@ -91,6 +97,9 @@ export function AliensMovement(){
             death.play();
             console.log("game over"); 
         }
+
+
+       
         
     }   
        

@@ -14,6 +14,7 @@ let posShots;
 
 let allDiv = document.querySelectorAll('.grille div');
 
+
 window.addEventListener('keydown', (e) => {
 });
 document.onkeydown = Spacekey;
