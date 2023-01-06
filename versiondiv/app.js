@@ -71,6 +71,10 @@ function player_shoot(){
       allDiv[posShots].classList.add("laser");
       if(allDiv[posShots].classList.contains("alien")){
         allDiv[posShots].classList.remove("alien");
+        const index = map.poziAliens.indexOf(posShots);
+        console.log(posShots);
+        map.newalien(posShots);
+        console.log(map.poziAliens);
         
         clearInterval(boucle);
         setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
