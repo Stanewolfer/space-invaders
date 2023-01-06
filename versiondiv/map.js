@@ -1,13 +1,17 @@
 export let alien = [];
 export const grid = document.querySelector(".grille");
-
+export let win = false;
+export let loose = false;
 export let incr = 0;
 export let posship = 230;
 export function setpoship(value) {
     posship = value;
 }
+export function newalien(posShots){
+    poziAliens = poziAliens.filter(el => el !== posShots);
+}
 
-const poziAliens = [0,1,2,3,4,5,6,7,8,9,10,11,20,21,22,23,24,25,26,27,28,29,30,31,40,41,42,43,44,45,46,47,48,49,50,51]
+export let poziAliens = [0,1,2,3,4,5,6,7,8,9,10,11,20,21,22,23,24,25,26,27,28,29,30,31,40,41,42,43,44,45,46,47,48,49,50,51];
 
 let direction = 1;
 
@@ -64,18 +68,25 @@ export function AliensMovement(){
                 break;
             }
         }
-        if(AllDiv[poziAliens[i]].classList.contains("border_left")){
-            if(fromLeft == true){
-                direction = 20;
-                fromLeft = false;
-                break;
-            }else{
-                direction = +1
-                fromLeft = true;
-                break;
+        if(!AllDiv[poziAliens[i]].classList.contains("tireur")){
+            if(AllDiv[poziAliens[i]].classList.contains("border_left")){
+                if(fromLeft == true){
+                    direction = 20;
+                    fromLeft = false;
+                    break;
+                }else{
+                    direction = +1
+                    fromLeft = true;
+                    break;
+                }
             }
+        }else{
+            death.play();
+            console.log("game over");
+            
         }
-    }
+        
+    }   
        
 
     for(let i = 0; i < poziAliens.length; i++){
