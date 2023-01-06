@@ -90,7 +90,6 @@ export function AliensMovement(){
             death.play();
             console.log("game over");
             perdu();
-            break;
             death.play();
             
         }else{
