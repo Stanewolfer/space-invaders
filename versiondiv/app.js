@@ -1,8 +1,10 @@
 import * as map from "./map.js";
-
-
-map.createmap();
-map.Aliens();
+var start=document.querySelector(".commencer")
+start.addEventListener('click', event => {
+  start.remove();
+  map.createmap();
+  map.Aliens();
+})
 setInterval(map.AliensMovement,300);
 let keypressed = true;
 let posShots;
@@ -33,7 +35,6 @@ function Spacekey(e) {
     if(keypressed == true){
       keypressed = false;
       player_shoot();
-
     }
   }
   if(e.keyCode=='71'){

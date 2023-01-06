@@ -2,7 +2,12 @@
 html{
     background-color: rgba(255,255,255,0.5);
 }
-
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .animatedBG{
     animation-name: flowBG;
     animation-duration: 40s;
@@ -82,4 +87,14 @@ h3 {
     text-align: center;
     height: 0px;
     width: 0px;
+}
+.commencer{
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    color: rgba(255,255,255,0.5);
+    background-color: darkmagenta;
+    font-size: larger;
+    border-radius: 50%;
+    border: 1px solid violet;
 }
