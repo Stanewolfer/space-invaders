@@ -75,8 +75,11 @@ h3 {
     background-position: center;
     background-size: contain;
 }
-.laser {
-    background-color: orange;
+.laser{
+    background: url(../ressources/laser.png);
+    background-position: center;
+    background-size: contain;
+    transform: rotate(-90deg);
 }
 .reset{
     display: flex;
