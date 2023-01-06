@@ -9,11 +9,9 @@ export function setpoship(value) {
 
 const poziAliens = [0,1,2,3,4,5,6,7,8,9,10,11,20,21,22,23,24,25,26,27,28,29,30,31,40,41,42,43,44,45,46,47,48,49,50,51]
 
-export const grid = document.querySelector(".grille")
-
 let direction = 1;
 
-export function CreateMap(){
+export function createmap(){
     var incr = 0;
     for(let i = 0; i < 240; i++){
         const newgrill = document.createElement("div");
