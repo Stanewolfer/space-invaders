@@ -43,7 +43,7 @@ function Spacekey(e) {
     perdu();
   }
 }
-if(allDiv[alien].classList.contains("border_bot")){
+if(allDiv[map.alien].classList.contains("border_bot")){
   perdu();
 }
 function player_left(){
