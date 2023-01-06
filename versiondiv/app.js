@@ -14,6 +14,7 @@ let allDiv = document.querySelectorAll('.grille div');
 
 window.addEventListener('keydown', (e) => {
 });
+
 document.onkeydown = Spacekey;
 function Spacekey(e) {
   e = e || window.event;
