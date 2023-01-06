@@ -91,6 +91,7 @@ function player_shoot(){
 }
 
 
+
 function gagner(){
   alert("VOUS AVEZ GAGNE !");
   var reset=document.querySelector(".bouton")
@@ -113,3 +114,4 @@ if(allDiv[position_alien].classList.contains("laser")){
   map.createmap();
 
 })
+
