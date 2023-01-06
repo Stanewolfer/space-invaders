@@ -71,7 +71,6 @@ function player_shoot(){
       allDiv[posShots].classList.add("laser");
       if(allDiv[posShots].classList.contains("alien")){
         allDiv[posShots].classList.remove("alien");
-        const index = map.poziAliens.indexOf(posShots);
         console.log(posShots);
         map.newalien(posShots);
         console.log(map.poziAliens);
@@ -88,15 +87,3 @@ function player_shoot(){
       }
   }, 100);
 }
-// map.poziAliens.forEach(i => {
-//   if(map.poziAliens[i][posShots].classList.contains("alien")){
-//     map.poziAliens[i][posShots].classList.remove("alien");
-//     delete map.poziAliens[i]
-//     touch.push(map.poziAliens.indexOf(posShots));
-//     clearInterval(boucle);
-//     setTimeout(() => allDiv[posShots].classList.remove("laser"), 100);
-//     keypressed = true;
-
-//   }
-  
-// });
