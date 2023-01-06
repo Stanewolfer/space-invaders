@@ -80,12 +80,16 @@ export function AliensMovement(){
                     break;
                 }
             }
-        }else{
+        }else if(poziAliens.length == 0){
+            death.play();
             console.log("game over");
             perdu();
             break;
             death.play();
             
+        }else{
+            death.play();
+            console.log("game over"); 
         }
         
     }   

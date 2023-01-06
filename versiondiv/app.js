@@ -6,6 +6,9 @@ start.addEventListener('click', event => {
   map.Aliens();
 
 setInterval(map.AliensMovement,300);
+map.createmap();
+map.Aliens();
+setInterval(map.AliensMovement,1000);
 let keypressed = true;
 let posShots;
 
@@ -73,6 +76,8 @@ function player_shoot(){
       allDiv[posShots].classList.add("laser");
       if(allDiv[posShots].classList.contains("alien")){
         allDiv[posShots].classList.remove("alien");
+        allDiv[posShots].classList.add("boom");
+
         console.log(posShots);
         map.newalien(posShots);
         console.log(map.poziAliens);
